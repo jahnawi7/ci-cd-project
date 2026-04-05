@@ -1,28 +1,28 @@
-# CI/CD Pipeline Project 🚀
+# CI/CD Pipeline Project 
 
-## 📌 Project Overview
+##  Project Overview
 This project demonstrates a simple CI/CD pipeline using GitHub Actions.
 
-## ⚙️ Tools Used
+##  Tools Used
 - GitHub
 - GitHub Actions
 - GitHub Pages
 
-## 🔄 CI/CD Workflow
+##  CI/CD Workflow
 1. Code pushed to GitHub
 2. Pipeline triggered automatically
 3. Files validated
 4. Deployment to GitHub Pages
 
-## 🌐 Live Demo
+##  Live Demo
 https://jahnawi7.github.io/ci-cd-project/
 
-## ✅ Features
+##  Features
 - Automated pipeline
 - Continuous deployment
 - Live hosting
 
-## 📂 Project Structure
+## Project Structure
 - index.html
 - README.md
 - .github/workflows/ci.yml
