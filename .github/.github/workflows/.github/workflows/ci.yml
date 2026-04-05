@@ -6,22 +6,24 @@ on:
 
 jobs:
   test:
+    name: Test Job
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Check if index.html exists
-      run: test -f index.html
+      - name: Check index file
+        run: test -f index.html
 
   build:
+    name: Build Job
     needs: test
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Build step
-      run: echo "Build successful "
+      - name: Build step
+        run: echo "Build successful "
