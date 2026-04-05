@@ -21,3 +21,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "Build successful "
+      build:
+  name: Build Job
+  needs: test
+  runs-on: ubuntu-latest
+
+  steps:
+    - uses: actions/checkout@v4
+    - run: echo "Build successful "
+    - name: Build Docker Image
+      run: docker build -t my-app .
