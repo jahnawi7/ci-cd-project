@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - run: test -f index.html
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check index file
+        run: test -f index.html
 
   build:
     name: Build Job
@@ -19,20 +22,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "Build successful "
-     build:
-  name: Build Job
-  needs: test
-  runs-on: ubuntu-latest
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Build message
+        run: echo "Build successful "
 
-    - name: Build message
-      run: echo "Build successful "
-
-    - name: Build Docker Image
-      run: docker build -t my-app .
+      - name: Build Docker Image
+        run: docker build -t my-app .
      
